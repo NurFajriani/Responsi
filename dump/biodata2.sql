@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `biodata2`
 --
 
-CREATE TABLE `biodata2` (
+CREATE TABLE "biodata2" (
   `id` int(11) NOT NULL,
   `namaDepan` varchar(20) DEFAULT NULL,
   `namaBelakang` varchar(20) DEFAULT NULL,
@@ -56,7 +56,7 @@ INSERT INTO `biodata2` (`id`, `namaDepan`, `namaBelakang`, `jenisKelamin`, `alam
 --
 -- Indexes for table `biodata2`
 --
-ALTER TABLE `biodata2`
+ALTER TABLE "biodata2"
   ADD PRIMARY KEY (`id`);
 
 --
@@ -66,7 +66,7 @@ ALTER TABLE `biodata2`
 --
 -- AUTO_INCREMENT for table `biodata2`
 --
-ALTER TABLE `biodata2`
+ALTER TABLE "biodata2"
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

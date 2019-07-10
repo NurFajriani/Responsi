@@ -1,6 +1,6 @@
 <?php
 
-  $link = mysqli_connect('db','user','test','biodata2');
+  $link = mysqli_connect('db','user','test',"biodata2");
   if (isset($_GET["id"])) {
 
     $id = $_GET["id"];

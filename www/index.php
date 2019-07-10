@@ -56,7 +56,7 @@
         echo "<td>".$data['jenisKelamin']."</td>"; 
         echo "<td>".$data['alamat']."</td>";
         echo "<td>".$data['noTelp']."</td>"; 
-		echo "<td>."$data['email']."</td>"; 
+		echo "<td>".$data['email']."</td>"; 
         // membuat link untuk mengedit dan menghapus data
         echo '<td>
           <a href="edit.php?id='.$data['id'].'">Edit</a> 

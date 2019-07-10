@@ -4,7 +4,8 @@
   $user = "root";
   $pass = "";
   $name = "biodata2";
-  $link = mysqli_connect($host,$user,$pass,$name);
+ $link = mysqli_connect('db','user','test','biodata2');
+
   //periksa koneksi, tampilkan pesan kesalahan jika gagal
   if(!$link){
     die ("Koneksi dengan database gagal: ".mysql_connect_errno().

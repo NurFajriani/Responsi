@@ -28,7 +28,7 @@
 
   
   if(!$result) {
-    die ("Query gagal dijalankan: ".mysqli_errno($link).
+    die ("Query gagal dijalankan: ".mysqli_error($link).
        " - ".mysqli_error($link));
   }
 }

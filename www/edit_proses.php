@@ -13,7 +13,7 @@
  
 
   
-  $query  = "UPDATE biodata2 SET 
+  $query  = "UPDATE tbl_biodata SET 
   namaDepan='$namadep', 
   namaBelakang='$namabel',
   jenisKelamin='$jk',

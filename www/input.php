@@ -18,6 +18,10 @@
         <fieldset>
         <legend>Input Biodata</legend>
           <p>
+            <label for="id">ID : </label>
+            <input type="text" name="id" id="id" placeholder=" ">
+          </p>
+		  <p>
             <label for="nim">Nama Depan : </label>
             <input type="text" name="namadep" id="namadep" placeholder=" ">
           </p>

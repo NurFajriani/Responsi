@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `biodata2`
 --
 
-CREATE TABLE "biodata2" (
+CREATE TABLE "tbl_biodata" (
   `id` int(11) NOT NULL,
   `namaDepan` varchar(20) DEFAULT NULL,
   `namaBelakang` varchar(20) DEFAULT NULL,
@@ -42,12 +42,6 @@ CREATE TABLE "biodata2" (
 -- Dumping data for table `biodata2`
 --
 
-INSERT INTO `biodata2` (`id`, `namaDepan`, `namaBelakang`, `jenisKelamin`, `alamat`, `noTelp`, `email`) VALUES
-(10, 'sugeng', '123456789', 'waria', 'wakanda', '0878899112233', 'sugengmut@yahoo.com'),
-(11, 'aaasd', '12345679', 'Laki-Laki', 'sleman', '08781818111', 'asdasd@yahoo.com'),
-(12, 'fjar', '12345679', 'Laki', 'sleman', '08781818111', 'asdasd@yahoo.com'),
-(17, 'aaaaaa', 'Yudi', 'Laki-Laki', 'Jogja', '99', 'dyanfajar0@gmail.com'),
-(18, 'Fajar', 'Yudi', 'Laki-Laki', 'Jogja', '123', 'dyanfajar0@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -56,8 +50,7 @@ INSERT INTO `biodata2` (`id`, `namaDepan`, `namaBelakang`, `jenisKelamin`, `alam
 --
 -- Indexes for table `biodata2`
 --
-ALTER TABLE "biodata2"
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -66,8 +59,7 @@ ALTER TABLE "biodata2"
 --
 -- AUTO_INCREMENT for table `biodata2`
 --
-ALTER TABLE "biodata2"
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

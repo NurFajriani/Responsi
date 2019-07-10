@@ -34,7 +34,7 @@
       </tr>
       <?php
       // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-      $query = "SELECT * FROM biodata2 ORDER BY id ASC";
+      $query = "SELECT * FROM tbl_biodata";
       $result = mysqli_query($link, $query);
       //mengecek apakah ada error ketika menjalankan query
       if(!$result){
@@ -43,20 +43,20 @@
       }
 
       //buat perulangan untuk element tabel dari data mahasiswa
-      $no = 1; //variabel untuk membuat nomor urut
+      
       // hasil query akan disimpan dalam variabel $data dalam bentuk array
       // kemudian dicetak dengan perulangan while
       while($data = mysqli_fetch_assoc($result))
       {
         // mencetak / menampilkan data
         echo "<tr>";
-        echo "<td>$no</td>"; 
-        echo "<td>$data[namaDepan]</td>"; 
-        echo "<td>$data[namaBelakang]</td>"; 
-        echo "<td>$data[jenisKelamin]</td>"; 
-        echo "<td>$data[alamat]</td>";
-        echo "<td>$data[noTelp]</td>"; 
-		echo "<td>$data[email]</td>"; 
+        echo "<td>".$data['id']."</td>"; 
+        echo "<td>".$data['namaDepan']."</td>"; 
+        echo "<td>".$data['namaBelakang']."</td>"; 
+        echo "<td>".$data['jenisKelamin']."</td>"; 
+        echo "<td>".$data['alamat']."</td>";
+        echo "<td>".$data['noTelp']."</td>"; 
+		echo "<td>."$data['email']."</td>"; 
         // membuat link untuk mengedit dan menghapus data
         echo '<td>
           <a href="edit.php?id='.$data['id'].'">Edit</a> 

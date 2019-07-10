@@ -7,6 +7,7 @@
 if (isset($_POST['input'])) {
 
 	// membuat variabel untuk menampung data dari form
+  $id = $_POST['id'];
   $namadep = $_POST['namadep'];
   $namabel = $_POST['namabel'];
   $jk = $_POST['jk'];
@@ -15,7 +16,15 @@ if (isset($_POST['input'])) {
   $email = $_POST['email'];
 
   // jalankan query INSERT untuk menambah data ke database
-  $query = "INSERT INTO biodata2 VALUES (NULL, '$namadep', '$namabel', '$jk','$alamat',$no,'$email')";
+  $query = "INSERT INTO tbl_biodata SET
+			id = $id,
+			namaDepan = '$namadep',
+			namaBelakang = '$namabel',
+			jenisKelamin = '$jk',
+			alamat = '$alamat',
+			noTelp = '$no',
+			email = '$email'
+			";
   $result = mysqli_query($link, $query);
   // periska query apakah ada error
   if(!$result){

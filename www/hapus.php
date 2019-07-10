@@ -5,7 +5,7 @@
 
     $id = $_GET["id"];
 
-    $query = "DELETE FROM biodata2 WHERE id='$id' ";
+    $query = "DELETE FROM tbl_biodata WHERE id=$id ";
     $hasil_query = mysqli_query($link, $query);
 
     if(!$hasil_query) {

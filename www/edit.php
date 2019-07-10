@@ -9,7 +9,7 @@
     $id = ($_GET["id"]);
 
     // menampilkan data  dari database yang mempunyai id=$id
-    $query = "SELECT * FROM biodata2 WHERE id='$id'";
+    $query = "SELECT * FROM tbl_biodata WHERE id=$id";
     $result = mysqli_query($link, $query);
     // mengecek apakah query gagal
     if(!$result){
@@ -19,6 +19,7 @@
     // mengambil data dari database dan membuat variabel" utk menampung data
     // variabel ini nantinya akan ditampilkan pada form
 	$data = mysqli_fetch_assoc($result);
+		$id = $data['id'];
 		$namadep = $data["namaDepan"];
 		$namabel = $data["namaBelakang"];
 		$jk 	 = $data["jenisKelamin"];
@@ -48,17 +49,17 @@
   <body>
     <h1>Edit Biodata</h1>
     <div class="container">
-      <form id="id" action="edit_proses.php?id='<?php echo $data['id']?>'" method="post">
+      <form id="id" action="edit_proses.php?id='<?php echo $id; ?>'" method="post">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <fieldset>
         <legend>Edit Biodata</legend>
           <p>
             <label for="namadep">Nama Depan : </label>
-            <input type="text" name="namadep" id="namadep" value="<?php echo $namadep ?>">
+            <input type="text" name="namadep" id="namadep" value="<?php echo $namadep; ?>">
           </p>
           <p>
             <label for="namabel">Nama Belakang: </label>
-            <input type="text" name="namabel" id="namabel" value="<?php echo $namabel ?>">
+            <input type="text" name="namabel" id="namabel" value="<?php echo $namabel; ?>">
           </p>
           <p>
             <label for="jk" >Jenis Kelamin : </label>
@@ -71,15 +72,15 @@
           </p>
           <p>
             <label for="alamat">Alamat : </label>
-            <input type="text" name="alamat" id="alamat" value="<?php echo $alamat ?>">
+            <input type="text" name="alamat" id="alamat" value="<?php echo $alamat; ?>">
           </p>
           <p >
             <label for="no">No Telp : </label>
-            <input type="text" name="no" id="no" value="<?php echo $no ?>">
+            <input type="text" name="no" id="no" value="<?php echo $no; ?>">
           </p>
 		  <p >
             <label for="email">E-mail : </label>
-            <input type="text" name="email" id="email" value="<?php echo $email ?>">
+            <input type="text" name="email" id="email" value="<?php echo $email; ?>">
           </p>
         </fieldset>
         <p>
